@@ -292,7 +292,42 @@ namespace ConsoleApp2
                         continue;
 
                     case 10:
-                        Console.WriteLine("Questão em Desenvolvimento");
+
+                        int abastercer = 1, alcool = 0, gasolina = 0, diesel = 0;
+                        while (abastercer == 1)
+                        {
+                            Console.WriteLine("Digite oque quer abastecer:" +
+                                "\n1 - ÁLCOOL" +
+                                "\n2 - GASOLINA" +
+                                "\n3 - DIESEL" +
+                                "\n4 - (ENCERRAR)");
+                            int tipoCombustivel = int.Parse(Console.ReadLine());
+                            
+                            if (tipoCombustivel == 1)
+                            {
+                                alcool += 1;
+                            }
+                            else if (tipoCombustivel == 2)
+                            {
+                                gasolina += 1;
+                            }
+                            else if (tipoCombustivel == 3)
+                            {
+                                diesel += 1;
+                            }
+                            else if (tipoCombustivel == 4)
+                            {
+                                Console.WriteLine("MUITO OBRIGADO");
+                                Console.WriteLine($"Álcool: {alcool}");
+                                Console.WriteLine($"Gasolina: {gasolina}");
+                                Console.WriteLine($"Diesel: {diesel}");
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Código inválido, tente novamente.");
+                            }
+                        }
 
                         continue;
 
