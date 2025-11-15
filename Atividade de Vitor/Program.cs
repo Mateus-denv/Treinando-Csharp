@@ -208,9 +208,26 @@ namespace ConsoleApp2
                         continue;
 
                     case 8:
-
-                        Console.WriteLine("Questão em Desenvolvimento");
-
+                        double valor, saldo;
+                        saldo = 1000.00;
+                        Console.WriteLine("Digite o valor do saque deseija realizar:");
+                        valor = double.Parse(Console.ReadLine());
+                        if (valor > 0)
+                        {
+                            if (valor <= saldo)
+                            {
+                                saldo = saldo - valor;
+                                Console.WriteLine($"Saque realizado com sucesso! Seu saldo atual é de R${saldo:F2}");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Saldo insuficiente para realizar o saque.");
+                            }
+                            
+                        }
+                        else {
+                            Console.WriteLine("Valor do saque é negativo");
+                        }
                         continue;
 
                     case 9:
