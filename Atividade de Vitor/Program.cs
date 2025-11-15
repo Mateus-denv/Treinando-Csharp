@@ -231,7 +231,63 @@ namespace ConsoleApp2
                         continue;
 
                     case 9:
-                        Console.WriteLine("Questão em Desenvolvimento");
+                        int consumoKwh = 0, moradia = 0;
+                        double valorConta = 0.0;
+                        Console.WriteLine("Qual o seu tipo de moradia (1-Residencial 2-Apartamento)");
+                        moradia = int.Parse(Console.ReadLine());
+                        if (moradia == 1)
+                        {
+                            Console.WriteLine("Qual o seu consumo em Kwh?");
+                            consumoKwh = int.Parse(Console.ReadLine());
+                            double desconto10 = 0.05;
+                            if (consumoKwh < 100)
+                            {
+                                valorConta = consumoKwh * 0.30;
+                                valorConta = valorConta - (valorConta * desconto10);
+                                Console.WriteLine($"Valor da sua conta: R${valorConta}");
+                            }
+                            else if (consumoKwh > 101 && consumoKwh < 200)
+                            {
+                                valorConta = consumoKwh * 0.50;
+                                valorConta = valorConta - (valorConta * desconto10);
+                                Console.WriteLine($"Valor da sua conta: R${valorConta}");
+
+                            }
+                            else
+                            {
+                                valorConta = consumoKwh * 0.70;
+                                valorConta = valorConta - (valorConta * desconto10);
+                                Console.WriteLine($"Valor da sua conta: R${valorConta}");
+
+                            }
+                        }
+                        else if (moradia == 2)
+                        {
+                            Console.WriteLine("Qual o seu consumo em Kwh?");
+                            consumoKwh = int.Parse(Console.ReadLine());
+                            if (consumoKwh < 100)
+                            {
+                                valorConta = consumoKwh * 0.30;
+                                Console.WriteLine($"Valor da sua conta: R${valorConta}");
+
+                            }
+                            else if (consumoKwh > 101 && consumoKwh < 200)
+                            {
+                                valorConta = consumoKwh * 0.50;
+                                Console.WriteLine($"Valor da sua conta: R${valorConta}");
+
+                            }
+                            else
+                            {
+                                valorConta = consumoKwh * 0.70;
+                                Console.WriteLine($"Valor da sua conta: R${valorConta}");
+
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Tipo de moradia inválido");
+                        }
 
                         continue;
 
