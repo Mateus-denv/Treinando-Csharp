@@ -332,8 +332,21 @@ namespace ConsoleApp2
                         continue;
 
                     case 11:
-                        Console.WriteLine("Questão em Desenvolvimento");
-
+                        int senha = 2002;
+                        while (true)
+                        {                            
+                            Console.WriteLine("Digite a senha correspondente a sua conta");
+                            int senhaDigitada = int.Parse(Console.ReadLine());
+                            if (senha == senhaDigitada)
+                            {
+                                Console.WriteLine("Seja bem vindo\nAcesso Permetido");
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Senha incorreta\nAcesso Negado");
+                            }
+                        }
                         continue;
 
                     case 12:
