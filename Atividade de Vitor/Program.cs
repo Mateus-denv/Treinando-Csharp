@@ -338,7 +338,19 @@ namespace ConsoleApp2
 
                     case 12:
                         Console.WriteLine("Questão em Desenvolvimento");
-
+                        int numero, add1 = 1;
+                        while (add1 == 1)
+                        {
+                            Console.WriteLine("Digite um numero para a tabuada");
+                            numero = int.Parse(Console.ReadLine());
+                            for (int i = 1; i <= 10; i++)
+                            {
+                                int resultado = numero * i;
+                                Console.WriteLine($"{numero} x {i} = {resultado}");
+                            }
+                            Console.WriteLine("Escolher outro numero: (1-Sim, 0-Não)");
+                            add1 = int.Parse(Console.ReadLine());
+                        }
                         continue;
 
                     case 13:
